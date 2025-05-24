@@ -9,6 +9,10 @@ def import_txt(filename):
     Restituisce:
     data : DataFrame
         DataFrame contenente i dati importati dal file di testo.
+    
+    Esempio:
+    >>> data = import_txt('dati.txt')
+    >>> print(data)
     """
     try:
         data = np.loadtxt(filename, unpack=True)
@@ -29,6 +33,10 @@ def convert_latex(filename):
     Restituisce:
     latex_data : str
         Stringa contenente i dati in formato LaTeX.
+    
+    Esempio:
+    >>> latex = convert_latex('dati.txt')
+    >>> print(latex)
     """
     try:
         data = np.loadtxt(filename, unpack=True)

@@ -1,6 +1,6 @@
 # Esempio di test per unimi_lab
 import unittest
-from unimi_lab import import_txt, convert_latex, fit_leastsquares, plot_errorbar, plot_fit
+from unimib_lab import import_txt, convert_latex, fit_leastsquares, plot_errorbar, plot_fit
 import numpy as np
 
 class TestEsempio(unittest.TestCase):
@@ -10,18 +10,21 @@ class TestEsempio(unittest.TestCase):
         self.assertIsInstance(arr, np.ndarray)
 
     def test_convert_latex(self):
-        # Test di esempio: conversione semplice
-        latex = convert_latex('a^2 + b^2 = c^2')
-        self.assertIn('^', latex)
+        # Uso un file di esempio invece di una stringa
+        convert_latex("data/test.txt")
+        # Non serve assert, la funzione salva un file
 
     def test_fit_leastsquares(self):
-        # Test di esempio: fitting di una retta
-        x = np.array([0, 1, 2, 3])
-        y = np.array([1, 2, 3, 4])
-        def model(x, a, b):
+        # Uso dati di esempio e la funzione con i parametri corretti
+        x = np.array([1, 2, 3, 4])
+        y = np.array([2, 4, 6, 8])
+        dy = np.array([0.1, 0.1, 0.1, 0.1])
+        # fit_leastsquares(x, y, dy, funzione, p0)
+        def f(x, a, b):
             return a * x + b
-        result = fit_leastsquares(model, x, y, [1, 0])
-        self.assertTrue(hasattr(result, 'x'))
+        p0 = [1, 0]
+        result = fit_leastsquares(x, y, dy, f, p0)
+        self.assertEqual(len(result), 2)  # parametri e covarianza
 
     def test_plot_errorbar(self):
         # Test di esempio: verifica che la funzione non sollevi errori

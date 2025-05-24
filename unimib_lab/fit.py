@@ -3,7 +3,8 @@ from iminuit.cost import LeastSquares
 from scipy.stats import chi2
 
 def fit_leastsquares(x_exp, y_exp, y_err, model, initial_params, limits=None):
-    """Funzione per eseguire un fit ai dati sperimentali utilizzando il metodo dei minimi quadrati.
+    """
+    Funzione per eseguire un fit ai dati sperimentali utilizzando il metodo dei minimi quadrati.
     Parametri:
     x_exp : array-like
         Valori sull'asse x dei dati sperimentali.
@@ -21,6 +22,14 @@ def fit_leastsquares(x_exp, y_exp, y_err, model, initial_params, limits=None):
     Restituisce:
     m : Minuit
         Oggetto Minuit contenente i risultati dell'ottimizzazione.  
+    
+    Esempio:
+    >>> def modello(x, a, b):
+    ...     return a * x + b
+    >>> x = [1, 2, 3]
+    >>> y = [2, 4, 6]
+    >>> dy = [0.1, 0.1, 0.1]
+    >>> fit_leastsquares(x, y, dy, modello, (1, 0))
     """
     least_squares = LeastSquares(x_exp, y_exp, y_err, model)
 

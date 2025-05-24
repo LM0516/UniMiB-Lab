@@ -19,6 +19,9 @@ def plot_errorbar(x, y, x_err=None, y_err=None, xlabel=None, ylabel=None, title=
         Etichetta per l'asse y.
     title : str, optional
         Titolo del grafico.
+    
+    Esempio:
+    >>> plot_errorbar([1,2,3], [2,4,6], y_err=[0.1,0.2,0.1], xlabel='x', ylabel='y', title='Grafico')
     """
     plt.figure(figsize=(12, 6))
     plt.errorbar(
@@ -60,6 +63,11 @@ def plot_fit(x_data, y_data, model, params, x_err=None, y_err=None, xlabel=None,
         Etichetta per l'asse y.
     title : str, optional
         Titolo del grafico.
+    
+    Esempio:
+    >>> def modello(x, a, b):
+    ...     return a * x + b
+    >>> plot_fit([1,2,3], [2,4,6], modello, (2,0), y_err=[0.1,0.2,0.1], xlabel='x', ylabel='y', title='Fit')
     """
     
     plt.figure(figsize=(12, 6))
