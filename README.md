@@ -27,8 +27,15 @@ pip install -e
 
 ## Utilizzo
 
-Una volta installata la libreria con `pip install -e .` e' possibile utilizzarla in qualsiasi progetto (cartella) che usa lo stesso ambiente virtuale.
+Una volta installata la libreria con `pip install -e .` è possibile utilizzarla in qualsiasi progetto (cartella) che usa lo stesso ambiente virtuale.
 
 ```python
 from unimib_lab import import_txt, fit_leastsquares, plot_errorbar
+```
+
+## Note
+Per disattivare l'ambiente virtuale:
+
+```bash
+deactivate
 ```
