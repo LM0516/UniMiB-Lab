@@ -1,0 +1,15 @@
+README.md
+pyproject.toml
+requirements.txt
+setup.cfg
+setup.py
+tests/test_esempio.py
+unimi_lab.egg-info/PKG-INFO
+unimi_lab.egg-info/SOURCES.txt
+unimi_lab.egg-info/dependency_links.txt
+unimi_lab.egg-info/requires.txt
+unimi_lab.egg-info/top_level.txt
+unimib_lab/__init__.py
+unimib_lab/data.py
+unimib_lab/fit.py
+unimib_lab/plot.py

@@ -1,3 +1,20 @@
+Metadata-Version: 2.4
+Name: unimi_lab
+Version: 0.1.0
+Summary: Libreria di funzioni per UniMiB-Lab
+Home-page: https://github.com/LM0516/UniMiB-Lab
+Author: Lorenzo Minuz
+Author-email: Tuo Nome <tuo@email.com>
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: scipy
+Requires-Dist: iminuit
+Dynamic: author
+Dynamic: home-page
+
 # UniMiB-Lab
 
 Libreria Python di funzioni per UniMiB-Lab.
